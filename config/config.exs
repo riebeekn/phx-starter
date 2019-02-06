@@ -29,7 +29,12 @@ config :phoenix, :json_library, Jason
 config :phx_starter, :pow,
   user: PhxStarter.Users.User,
   repo: PhxStarter.Repo,
-  web_module: PhxStarterWeb
+  web_module: PhxStarterWeb,
+  extensions: [PowPersistentSession, PowResetPassword, PowEmailConfirmation],
+  controller_callbacks: Pow.Extension.Phoenix.ControllerCallbacks,
+  mailer_backend: PhxStarterWeb.Pow.Mailer,
+  routes_backend: PhxStarterWeb.Pow.Routes,
+  messages_backend: PhxStarterWeb.Pow.Messages
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

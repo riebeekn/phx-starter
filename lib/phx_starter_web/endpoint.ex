@@ -44,6 +44,8 @@ defmodule PhxStarterWeb.Endpoint do
 
   # enable Pow session based authentication
   plug Pow.Plug.Session, otp_app: :phx_starter
+  # enable Pow persistent sessions
+  plug PowPersistentSession.Plug.Cookie
 
   plug PhxStarterWeb.Router
 end

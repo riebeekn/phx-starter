@@ -1,6 +1,7 @@
 defmodule PhxStarterWeb.Router do
   use PhxStarterWeb, :router
   use Pow.Phoenix.Router
+  use Pow.Extension.Phoenix.Router, otp_app: :phx_starter
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -23,6 +24,7 @@ defmodule PhxStarterWeb.Router do
     pipe_through :browser
 
     pow_routes()
+    pow_extension_routes()
   end
 
   scope "/", PhxStarterWeb do
