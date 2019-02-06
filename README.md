@@ -17,11 +17,11 @@ Make the following changes to rename the project to whatever your project name i
   * Replace phx_starter with my_app
 * Rename the following folders
   * test/phx\_starter_web
-	* lib/phx_starter
-	* lib/phx\_starter_web
+  * lib/phx_starter
+  * lib/phx\_starter_web
 * Rename the following files
   * lib/phx\_starter_web.ex
-	* lib/phx_starter.ex
+  * lib/phx_starter.ex
 
 ### Setup
 Run the following commands to set-up the project:
